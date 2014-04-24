@@ -74,7 +74,7 @@ public final class LightningPool {
         // Pre-create objects
         var i:uint = maxPoolSize;
         while (--i > -1)
-            POOL[i] = new Lightning(0, 0, 0, true);
+            POOL[i] = new LightningBase(0, 0, 0, true);
         // Flag it
         return true;
     }
@@ -89,7 +89,7 @@ public final class LightningPool {
         // Pre-create objects
         var i:uint = GROWTH_VALUE;
         while (--i > -1)
-            POOL.unshift(new Lightning(0, 0, 0, true));
+            POOL.unshift(new LightningBase(0, 0, 0, true));
         COUNTER = GROWTH_VALUE;
         // Create another one as result
         return getLightning();

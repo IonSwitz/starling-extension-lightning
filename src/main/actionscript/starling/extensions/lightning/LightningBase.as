@@ -553,7 +553,7 @@ public class LightningBase extends starling.display.Sprite {
         // update children
         const n:uint = _childHolder.numChildren;
         for (var i:uint = 0; i < n; i++) {
-            Lightning(_childHolder.getChildAt(i)).updateBase(stroke);
+            LightningBase(_childHolder.getChildAt(i)).updateBase(stroke);
         }
     }
 
@@ -596,7 +596,7 @@ public class LightningBase extends starling.display.Sprite {
             // iterate and draw sub-lines
             const n:uint = _childHolder.numChildren;
             for (var j:uint = 0; j < n; j++) {
-                var cL:Lightning = Lightning(_childHolder.getChildAt(j));
+                var cL:LightningBase = LightningBase(_childHolder.getChildAt(j));
                 if (cL.startStep == i) {
                     cL.startX = _tx;
                     cL.startY = _ty;
