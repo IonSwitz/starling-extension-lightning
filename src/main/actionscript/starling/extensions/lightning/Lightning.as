@@ -1,7 +1,7 @@
 package starling.extensions.lightning 
 {
 	import starling.display.graphics.Stroke;
-
+	
 	public class Lightning extends LightningBase 
 	{
 		protected var _stroke:Stroke = null;
@@ -23,6 +23,16 @@ package starling.extensions.lightning
 			
 			updateBase(_stroke);
 		}
+		
+		public function get stroke() : Stroke
+		{
+			if ( _stroke == null )
+			{
+				_stroke = new Stroke();
+				addChild(_stroke);
+			}
+			return _stroke;
+		}
 	}
-
 }
+
